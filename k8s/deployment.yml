@@ -7,7 +7,7 @@ spec:
    replicas: 1
    selector:
      matchLabels:
-       app: staic
+       app: static
    template:
      metadata:
         name: static-pod
