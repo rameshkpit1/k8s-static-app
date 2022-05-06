@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: static-deploy
+    namespace: app1
+spec:
+   replicas: 1
+   selector:
+     matchLabels:
+       app: staic
+   template:
+     metadata:
+        name: static-pod
+        labels:
+          app: static
+     spec:
+       containers:
+       - name: static-cont
+         image: 427404661948.dkr.ecr.us-east-2.amazonaws.com/k8s-static-app:latest
+         ports:
+         - containerPort: 80
+
+ 
