@@ -9,8 +9,8 @@ spec:
   rules:
   - host: dev-static.awsweb.online
     http:
-      paths:
-      - path:
-        backend:
+     paths:
+     - path:
+       backend:
           serviceName: static-service
           servicePort: 80
